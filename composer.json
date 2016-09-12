@@ -1,11 +1,11 @@
 {
-    "name": "anouar/fpdf",
-    "description": "Fpdf allows to generate PDF files",
+    "name": "mumpo/fpdf",
+    "description": "Fpdf allows to generate PDF files with Barcodes",
     "license": "BSD-2-Clause",
     "source": {
         "type": "git",
-        "url": "git@github.com:xroot/laravel-fpdf.git",
-        "reference": "barcode"
+        "url": "git@github.com:xroot/laravel-fpdf-barcode.git",
+        "reference": "master"
     },
     "authors": [
         {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Anouar\\Fpdf": "src/"
+            "Mumpo\\Fpdf": "src/"
         }
     }
 }
