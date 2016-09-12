@@ -4,7 +4,7 @@
     "license": "BSD-2-Clause",
     "source": {
         "type": "git",
-        "url": "git@github.com:xroot/laravel-fpdf-barcode.git",
+        "url": "git@github.com:xroot/fpdf-barcode.git",
         "reference": "master"
     },
     "authors": [
