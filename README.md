@@ -1,71 +1,24 @@
-If you're going to use this package with L4 , make sure to include the laravel 4 version: 
-```js
-"require": {
-    "anouar/fpdf": "1.0.1"
-}
-```
-##laravel-Fpdf
+##laravel-Fpdf-barcode
 
-Fpdf allows to generate PDF files . This package is the laravel package version of http://www.fpdf.org , for more information check this link http://www.fpdf.org/?lang=en 
+Fork of https://github.com/anouarabdsslm/laravel-fpdf, with barcode and QR generation capabilities.
 
-##Donation :
-If you want to support us: <a href='https://pledgie.com/campaigns/27748'><img alt='Click here to lend your support to: github and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27748.png?skin_name=chrome' border='0' ></a>
-
-###Installation
-To your `composer.json` file, add:
-
-```js
-"require-dev": {
-	"anouar/fpdf": "1.0.2"
-}
-```
-
-Next, run `composer install` to download it.
-
-Add the service provider to `app/config/app.php`, within the `providers` array.
+###Usage
 
 ```php
-'providers' => array(
-	// ...
+$fpdf = new FpdfBarcode();
+$fpdf->AddPage();
 
-	'Anouar\Fpdf\FpdfServiceProvider',
-)
-```
+// Code 128 horizontal
+// $x, $y, $code, $width, $height, $vertical
+$fpdf->code128(15, 15, 'HORIZONTAL CODE', 85, 10, false);
 
-Finally, add the alias to `app/config/app.php`, within the `aliases` array.
+// Code 128 vertical
+// $x, $y, $code, $width, $height, $vertical
+$fpdf->code128(150, 15, 'VERTICAL CODE', 85, 10, true);
 
-```php
-'aliases' => array(
-	// ...
+// QR
+// $code, $x, $y, $size
+$fpdf->QR('QR CODE', 15, 50, 20);
 
-	'Fpdf'	  => 'Anouar\Fpdf\Facades\Fpdf',
-)
-```
-
-##Example Code
-
-```php
-Route::get('pdf', function(){
-	$fpdf = new Fpdf();
-        $fpdf->AddPage();
-        $fpdf->SetFont('Arial','B',16);
-        $fpdf->Cell(40,10,'Hello World!');
-        $fpdf->Output();
-        exit;
-
-});
-```
-
-##OR
-
-```
-Route::get('pdf', function(){
-
-        Fpdf::AddPage();
-        Fpdf::SetFont('Arial','B',16);
-        Fpdf::Cell(40,10,'Hello World!');
-        Fpdf::Output();
-        exit;
-
-});
+$fpdf->Output();
 ```
