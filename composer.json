@@ -1,5 +1,5 @@
 {
-    "name": "mumpo/fpdf",
+    "name": "mumpo/fpdf-barcode",
     "description": "Fpdf allows to generate PDF files with Barcodes",
     "license": "BSD-2-Clause",
     "source": {
@@ -8,10 +8,6 @@
         "reference": "master"
     },
     "authors": [
-        {
-            "name": "Anouar",
-            "email": "dtekind@gmail.com"
-        },
 		{
 			"name": "Mumpo",
 			"email": "sergiferriz@gmail.com"
@@ -23,7 +19,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Mumpo\\Fpdf": "src/"
+            "Mumpo\\FpdfBarcode": "src/"
         }
     }
 }
