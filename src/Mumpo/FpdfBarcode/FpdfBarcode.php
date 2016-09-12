@@ -1,4 +1,4 @@
-<?php namespace Anouar\Fpdf;
+<?php namespace Mumpo\FpdfBarcode;
 
 /*******************************************************************************
 * Script :  PDF_Code128

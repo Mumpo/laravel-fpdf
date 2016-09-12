@@ -1,4 +1,4 @@
-<?php namespace Anouar\Fpdf;
+<?php namespace Mumpo\FpdfBarcode;
 /*
  * Generateur de QRCode
  * (QR Code is registered trademark of DENSO WAVE INCORPORATED | http://www.denso-wave.com/qrcode/)
